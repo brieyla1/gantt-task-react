@@ -44,7 +44,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           key={date.getFullYear()}
           y={headerHeight * 0.8}
           x={columnWidth * i + columnWidth * 0.5}
-          className={styles.calendarBottomText}
+          className={styles.calendarBottomText + " dark:text-white text-black"}
         >
           {bottomValue}
         </text>
@@ -317,9 +317,9 @@ export const Calendar: React.FC<CalendarProps> = ({
       [topValues, bottomValues] = getCalendarValuesForYear();
       break;
     case ViewMode.Month:
-        [topValues, bottomValues] = getCalendarValuesForMonth();
-        break;
-      case ViewMode.Week:
+      [topValues, bottomValues] = getCalendarValuesForMonth();
+      break;
+    case ViewMode.Week:
       [topValues, bottomValues] = getCalendarValuesForWeek();
       break;
     case ViewMode.Day:

@@ -1,5 +1,6 @@
 {
   "name": "gantt-task-react",
+  "private": true,
   "version": "0.3.9",
   "description": "Interactive Gantt Chart for React with TypeScript.",
   "author": "MaTeMaTuK <maksym.vikarii@gmail.com>",
@@ -25,6 +26,7 @@
   ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
+    "buildtsc": "microbundle-crl  --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
